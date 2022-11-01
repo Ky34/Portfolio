@@ -1,40 +1,54 @@
 body {
-  margin: 0; /* Отступы */
+  margin: 0; /* Отступы со всех сторон*/
   font-family: 'Montserrat', sans-serif; /* Шрифт семейства 'Montserrat', прямой без наклона */
 }
 
 .header {
-  width: 100%;
-  height: 100vh;
-  background-color: darkgreen;
-
+  position: relative; /* Будет являться родителем для вложенных тегов */
   /* Определяем модель flex-box для блока .header */
   display: flex;
   flex-direction: column; /* Выстраиваем flex-элементы в колонку, основная ось Y */
-
   justify-content: center; /* Выравнивание по основной оси (по вертикали) */
   align-items: center; /* Выравнивание по поперечной оси (по горизонтали) */
+
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: #556983;
+  background-image: url("./../img/header/header-bg.jpg"); /* фоновое изображение, путь из папки, где расположен данный css файл */
+  background-size: cover; /* полностью заполняет собой фон, сохраняя масштаб и без пустых областей */
+  background-position: center;
+
 }
 
 .header-title {
-  position: absolute;
-  width: 581px;
-  height: 73px;
-  left: 430px;
-  top: 327px;
-
-  font-family: 'Montserrat';
-  font-style: normal;
+  margin: 0;
+  margin-bottom: 25px;
   font-weight: 700;
   font-size: 56px;
   line-height: 130%;
-  /* identical to box height, or 73px */
-
   text-align: center;
-
   color: #FFFFFF;
 }
 
 .header-subtitle {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;   /* or 24px */
+  text-align: center;
+  letter-spacing: 0.2em; /* расстояние между буквами */
+  text-transform: uppercase; /* отвечает за верхний регистр (всё набрано заглавными буквами) */
+  color: #FFFFFF;
+}
 
+.header-arrow {
+  width: 48px;
+  height: 48px;
+
+  position: absolute; /* Позиционирование относительно своего родителя (.header) по центру */
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0); /* смещение по X (назад на 50% ширины элемента) и по Y */
 }
