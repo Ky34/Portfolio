@@ -5,6 +5,7 @@
 body {
   margin: 0; /* Отступы со всех сторон*/
   font-family: 'Montserrat', sans-serif; /* Шрифт семейства 'Montserrat', прямой без наклона */
+  color: #000000;
 }
 
 .container {
@@ -94,10 +95,26 @@ body {
 
 .card {
   margin-bottom: 30px; /* внешние отступы */
-  padding: 20px;  /* внутренние отступы со всех сторон элемента */
   max-width: 540px;
   background-color: #FFFFFF;
   box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35); /* card-shadow */
+  transition: transform 0.2s ease-in; /* плавность перемещения карточки */
+}
+
+.card:hover {
+  transform: translateY(-15px); /* перемещение карточки при наведении курсора по оси Y (вверх) на 15 пикселей */
+}
+
+.card-link {
+  display: block;
+  padding: 20px; /* внутренние отступы со всех сторон элемента */
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.2s ease-in; /* плавность смены цвета текста в карточке */
+}
+
+.card-link:hover {
+  color: rgb(32, 91, 236);
 }
 
 .card:last-child, .card:nth-last-child(2) { /* псевдоселектор который выберет последний тег с классом card в рамках контейнера, в котором он находиться. nth-last-child - псевдоселектор, который выбирает элемент по номеру с конца */
@@ -114,14 +131,12 @@ body {
   font-weight: 600;
   font-size: 24px;
   line-height: 130%; /* or 31px */
-  color: #000000;
 }
 
 .card p {  /* выбираем все теги <p> которые лежать в элементе с классом card */
   margin: 0;
   font-size: 16px;
   line-height: 130%; /* identical to box height, or 21px */
-  color: #000000;
 }
 
 /* Footer */
@@ -192,6 +207,13 @@ body {
   font-size: 16px;
   text-transform: uppercase;
   text-decoration: none; /* убирает нижнее подчеркивание у ссылки-кнопки */
+
+  transition: all 0.2s ease-in;
+}
+
+.footer-button:hover {
+  background-color: white;
+  color: #1E4776;
 }
 
 .footer-contacts p {
@@ -199,4 +221,59 @@ body {
   font-size: 16px;
   line-height: 1.3;
   color: #7E9EC9;
+}
+
+/* Project */
+
+.project {
+  padding: 80px 0 120px 0;
+  text-align: center;
+}
+
+.project-header {
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1.3;
+}
+
+.project-img {
+  margin-bottom: 70px;
+}
+
+.project-description {
+  margin: 0 auto 60px;
+  max-width: 730px;
+}
+
+.project-description p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.project-btn-back {
+  display: inline-block; 
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 60px;
+
+  border: 3px solid #275BEC;
+  border-radius: 50px;
+
+  color: #275BEC;
+  line-height: 54px; 
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: all 0.2s ease-in;
+}
+
+.project-btn-back:hover {
+  background-color: #275BEC;
+  color: white;
 }
