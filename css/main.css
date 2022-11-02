@@ -1,7 +1,23 @@
+* {   /* * - универсальный селектор, который выбирает все элементы на странице */
+  box-sizing: border-box; /* размер блока включает в себя все элемнты рамки итд */
+}
+
 body {
   margin: 0; /* Отступы со всех сторон*/
   font-family: 'Montserrat', sans-serif; /* Шрифт семейства 'Montserrat', прямой без наклона */
 }
+
+.container {
+  max-width: 1110px;
+  margin-left: auto; /* автоматическое выравнивание слева и справа для блочной мождели */
+  margin-right: auto;
+}
+
+.none {
+  display: none !important; /* полностью скрывает элемент на странице, для удобства вёрстки (!important означает что свойство нельзя переопределять) */
+}
+
+/* Header */
 
 .header {
   position: relative; /* Будет являться родителем для вложенных тегов */
@@ -51,4 +67,59 @@ body {
   bottom: 30px;
   left: 50%;
   transform: translate(-50%, 0); /* смещение по X (назад на 50% ширины элемента) и по Y */
+}
+
+/* portfolio */
+
+.portfolio {
+  padding-top: 80px;
+  padding-bottom: 115px;
+}
+
+.portfolio-header {
+  margin: 0;
+  margin-bottom: 70px;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 130%; /* identical to box height, or 60px */
+  text-align: center;
+  color: #000000;
+}
+
+.portfolio-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* перенос на следующую строчку */
+  justify-content: space-between; /* выравнивает элементы по краям контейнера, распределяя свободное пространство между элементами*/
+}
+
+.card {
+  margin-bottom: 30px; /* внешние отступы */
+  padding: 20px;  /* внутренние отступы со всех сторон элемента */
+  max-width: 540px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35); /* card-shadow */
+}
+
+.card:last-child, .card:nth-last-child(2) { /* псевдоселектор который выберет последний тег с классом card в рамках контейнера, в котором он находиться. nth-last-child - псевдоселектор, который выбирает элемент по номеру с конца */
+  margin-bottom: 0;
+}
+
+.card-img {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  margin: 0;
+  margin-bottom: 13px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%; /* or 31px */
+  color: #000000;
+}
+
+.card p {  /* выбираем все теги <p> которые лежать в элементе с классом card */
+  margin: 0;
+  font-size: 16px;
+  line-height: 130%; /* identical to box height, or 21px */
+  color: #000000;
 }
