@@ -277,3 +277,19 @@ body {
   background-color: #275BEC;
   color: white;
 }
+
+/* .block {
+  width: 800px;
+  height: 400px;
+  background-color: blueviolet;
+} */
+
+/* для экранов с шириной до 800px будет работать данный код */
+
+/* @media (max-width: 800px) { - медиа запрос, в () пишется условиде, далее код, который будет выполняться при данном условии */
+  /* .block{
+    width: 400px;
+    background-color: coral;
+
+  }
+} */

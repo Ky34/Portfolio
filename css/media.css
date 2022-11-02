@@ -1,0 +1,14 @@
+/* Медиа запрос: для экранов с шириной ДО 1140px */
+@media (max-width: 1140px) {
+  
+}
+
+/* Медиа запрос: для экранов с шириной ДО 760px */
+@media (max-width: 760px) {
+  .header-title {
+    font-size: 32px;
+  }
+  .header-subtitle {
+    font-size: 14px;
+  }
+}
