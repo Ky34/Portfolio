@@ -1,14 +1,125 @@
 /* Медиа запрос: для экранов с шириной ДО 1140px */
 @media (max-width: 1140px) {
-  
+  .card {
+    width: calc(50% - 15px); /* свойство calc() позволяет совместить и % и px, с этим свойством карточка будет занимать половина - 15px для того, чтобы было расстояние между карточками в 30px */
+  }
+
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .footer-row {
+    flex-direction: column-reverse; /* размещаем элементы в колонку в обратном порядке */
+    align-items: center; /* выравниваем элементы по центру */
+    text-align: center; /* выравниваем текст по центру */
+  }
+
+  .footer-col {
+    margin-bottom: 50px;
+  }
+
+  .footer-col:first-child {
+    margin-bottom: 0;
+  }
 }
 
 /* Медиа запрос: для экранов с шириной ДО 760px */
 @media (max-width: 760px) {
+  .header {
+    background-image: url("./../img/header/header-bg-mobile.jpg")
+  }
+
   .header-title {
     font-size: 32px;
   }
+
   .header-subtitle {
     font-size: 14px;
   }
+
+  .portfolio {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .portfolio-header {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .portfolio-cards-wrapper {
+    justify-content: center; /* выравнивает карточки по центру */
+  }
+
+  .card {
+    max-width: 530px; /* выравниваем картинку в карточке */
+    width: 100%; /* делаем так, чтобы карточки распологались по 1 в ряд а не по 2 */
+  }
+
+  .card-link {
+    padding: 15px;
+  }
+
+  .card:nth-last-child(2) {
+    margin-bottom: 30px;
+  }
+
+  .card-img {
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .footer-copyright-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .footer-copyright p {
+    font-size: 14px;
+  }
+
+  .footer-icons p {
+    font-size: 14px;
+  }
+
+  .footer-contacts p {
+    font-size: 14px;
+    margin: 0;
+    margin-top: 15px;
+  }
+
+  .project {
+    padding: 40px 0 60px;
+  }
+
+  .project-header {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .project-img {
+    margin-bottom: 20px;
+  }
+
+  .project-description {
+    margin-bottom: 50px;
+  }
+
+  .project-btn-back {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    max-width: 320px;
+  }
 }
+
+
