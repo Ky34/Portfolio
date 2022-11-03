@@ -2,6 +2,10 @@
   box-sizing: border-box; /* размер блока включает в себя все элемнты рамки итд */
 }
 
+html {
+  scroll-behavior: smooth;  /* делает прокрутку по нажатию на стрелку плавной */
+}
+
 body {
   margin: 0; /* Отступы со всех сторон*/
   font-family: 'Montserrat', sans-serif; /* Шрифт семейства 'Montserrat', прямой без наклона */
@@ -38,8 +42,8 @@ img {
   width: 100%;
   height: 100vh;
 
-  background-color: #556983;
-  background-image: url("./../img/header/header-bg.jpg"); /* фоновое изображение, путь из папки, где расположен данный css файл */
+  /* background-color: #556983; */
+  /* background-image: url("./../img/header/header-bg.jpg"); */ /* фоновое изображение, путь из папки, где расположен данный css файл */
   background-size: cover; /* полностью заполняет собой фон, сохраняя масштаб и без пустых областей */
   background-position: center;
 

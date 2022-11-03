@@ -26,10 +26,7 @@
 
 /* Медиа запрос: для экранов с шириной ДО 760px */
 @media (max-width: 760px) {
-  .header {
-    background-image: url("./../img/header/header-bg-mobile.jpg")
-  }
-
+  
   .header-title {
     font-size: 32px;
   }
